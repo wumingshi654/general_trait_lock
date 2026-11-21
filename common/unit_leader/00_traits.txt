@@ -1158,9 +1158,6 @@ leader_traits = {
 			NOT = { has_global_flag = lock_organizer }
 			check_variable = { num_battle_plans > 0 }
 		}
-		gain_xp_leader = {
-			NOT = { has_global_flag = lock_organizer }
-		}
 		custom_gain_xp_trigger_tooltip = is_using_battle_plans
 		
 		cost = 1000
@@ -1191,9 +1188,6 @@ leader_traits = {
 				greater_than = { value = num_units  multiply = 0.4 }
 			}
 		}
-		gain_xp_leader = {
-			NOT = { has_global_flag = lock_cavalry_leader }
-		}
 		custom_gain_xp_trigger_tooltip = cavalary_ratio_over_40
 		
 		cost = 1000
@@ -1223,9 +1217,6 @@ leader_traits = {
 				value = num_infantry
 				greater_than = { value = num_units  multiply = 0.8 }
 			}
-		}
-		gain_xp_leader = {
-			NOT = { has_global_flag = lock_infantry_leader }
 		}
 		custom_gain_xp_trigger_tooltip = infantry_ratio_over_80
 		
@@ -1286,9 +1277,6 @@ leader_traits = {
 				opponent = { has_flanked_opponent = yes }
 			}
 		}
-		gain_xp_leader = {
-			NOT = { has_global_flag = lock_trickster }
-		}
 		custom_gain_xp_trigger_tooltip = has_flanked
 		
 		cost = 500
@@ -1309,9 +1297,6 @@ leader_traits = {
 		gain_xp = {
 			NOT = { has_global_flag = lock_winter_specialist }
 			temperature < -10
-		}
-		gain_xp_leader = {
-			NOT = { has_global_flag = lock_winter_specialist }
 		}
 		cost = 500
 		modifier = {
@@ -1391,9 +1376,6 @@ leader_traits = {
 				has_combat_modifier = river_crossing
 			}
 		}
-		gain_xp_leader = {
-			NOT = { has_global_flag = lock_trait_engineer }
-		}
 		cost = 700
 		modifier = {
 			river = {
@@ -1426,9 +1408,6 @@ leader_traits = {
 				greater_than = { value = num_units  multiply = 0.4 }
 			}
 		}
-		gain_xp_leader = {
-			NOT = { has_global_flag = lock_panzer_leader }
-		}
 		custom_gain_xp_trigger_tooltip = armored_ratio_over_40
 		cost = 700
 		modifier = {
@@ -1460,9 +1439,6 @@ leader_traits = {
 				has_combat_modifier = amphibious_attack
 			}
 		}
-		gain_xp_leader = {
-			NOT = { has_global_flag = lock_commando }
-		}
 		cost = 700
 		modifier = {
 			out_of_supply_factor = -0.25
@@ -1484,9 +1460,6 @@ leader_traits = {
 		gain_xp = {
 			NOT = { has_global_flag = lock_desert_fox }
 			is_fighting_in_terrain = desert
-		}
-		gain_xp_leader = {
-			NOT = { has_global_flag = lock_desert_fox }
 		}
 		cost = 700
 		modifier = {
@@ -1517,9 +1490,6 @@ leader_traits = {
 			NOT = { has_global_flag = lock_swamp_fox }
 			is_fighting_in_terrain = marsh
 		}
-		gain_xp_leader = {
-			NOT = { has_global_flag = lock_swamp_fox }
-		}
 		cost = 700
 		modifier = {
 			marsh = {
@@ -1541,9 +1511,6 @@ leader_traits = {
 		gain_xp = {
 			NOT = { has_global_flag = lock_trait_mountaineer }
 			is_fighting_in_terrain = mountain
-		}
-		gain_xp_leader = {
-			NOT = { has_global_flag = lock_trait_mountaineer }
 		}
 		cost = 700
 		modifier = {
@@ -1567,9 +1534,6 @@ leader_traits = {
 			NOT = { has_global_flag = lock_hill_fighter }
 			is_fighting_in_terrain = hills
 		}
-		gain_xp_leader = {
-			NOT = { has_global_flag = lock_hill_fighter }
-		}
 		cost = 700
 		modifier = {
 			hills = {
@@ -1591,9 +1555,6 @@ leader_traits = {
 		gain_xp = {
 			NOT = { has_global_flag = lock_jungle_rat }
 			is_fighting_in_terrain = jungle
-		}
-		gain_xp_leader = {
-			NOT = { has_global_flag = lock_jungle_rat }
 		}
 		cost = 700
 		modifier = {
@@ -1617,9 +1578,6 @@ leader_traits = {
 			NOT = { has_global_flag = lock_ranger }
 			is_fighting_in_terrain = forest
 		}
-		gain_xp_leader = {
-			NOT = { has_global_flag = lock_ranger }
-		}
 		cost = 700
 		modifier = {
 			forest = {
@@ -1641,9 +1599,6 @@ leader_traits = {
 		gain_xp = {
 			NOT = { has_global_flag = lock_urban_assault_specialist }
 			is_fighting_in_terrain = urban
-		}
-		gain_xp_leader = {
-			NOT = { has_global_flag = lock_urban_assault_specialist }
 		}
 		cost = 500
 		modifier = {
@@ -1667,9 +1622,6 @@ leader_traits = {
 		gain_xp = {
 			NOT = { has_global_flag = lock_naval_invader }
 			is_amphibious_invasion = yes
-		}
-		gain_xp_leader = {
-			NOT = { has_global_flag = lock_naval_invader }
 		}
 		cost = 100
 		modifier = {
@@ -1783,9 +1735,6 @@ leader_traits = {
 				has_combat_modifier = fort_attack
 				dig_in > 10
 			}
-		}
-		gain_xp_leader = {
-			NOT = { has_global_flag = lock_fortress_buster }
 		}
 		cost = 700
 		modifier = {
@@ -2071,9 +2020,6 @@ leader_traits = {
 			NOT = { has_global_flag = lock_blockade_runner }
 			fastest_unit > 3.2
 		}
-		gain_xp_leader = {
-			NOT = { has_global_flag = lock_blockade_runner }
-		}
 		modifier = {
 			naval_retreat_chance = 0.2
 			naval_retreat_speed = 0.15
@@ -2093,9 +2039,6 @@ leader_traits = {
 		gain_xp = {
 			NOT = { has_global_flag = lock_seawolf }
 			submarine > 0.8 # at least 80% subs
-		}
-		gain_xp_leader = {
-			NOT = { has_global_flag = lock_seawolf }
 		}
 		cost = 700
 		modifier = {
@@ -2141,9 +2084,6 @@ leader_traits = {
 			screen_ship > 0.5
 			#should gain XP when screening_ratio > 0.5
 		}
-		gain_xp_leader = {
-			NOT = { has_global_flag = lock_fleet_protector }
-		}
 		custom_gain_xp_trigger_tooltip = FLEET_PROTECTOR_TRIGGER_TT
 		cost = 500
 		modifier = {
@@ -2167,9 +2107,6 @@ leader_traits = {
 		gain_xp = {
 			NOT = { has_global_flag = lock_superior_tactician }
 			is_winning = yes
-		}
-		gain_xp_leader = {
-			NOT = { has_global_flag = lock_superior_tactician }
 		}
 		cost = 500
 		modifier = {
@@ -2198,9 +2135,6 @@ leader_traits = {
 				has_carrier_airwings_in_own_combat = yes
 			}
 		}
-		gain_xp_leader = {
-			NOT = { has_global_flag = lock_air_controller }
-		}
 		cost = 500
 		modifier = {
 			navy_carrier_air_targetting_factor = 0.1 # Airplanes from carriers has better naval targetting
@@ -2224,9 +2158,6 @@ leader_traits = {
 					capital_ship > 0.0
 				}
 			}
-		}
-		gain_xp_leader = {
-			NOT = { has_global_flag = lock_ironside }
 		}
 		custom_gain_xp_trigger_tooltip = IRONSIDE_TRIGGER_TT
 		cost = 500
@@ -2718,9 +2649,6 @@ leader_traits = {
 			NOT = { has_global_flag = lock_arctic_water_expert }
 			is_fighting_in_weather = arctic_water
 		}
-		gain_xp_leader = {
-			NOT = { has_global_flag = lock_arctic_water_expert }
-		}
 		
 		cost = 1000
 		modifier = {
@@ -2740,9 +2668,6 @@ leader_traits = {
 		gain_xp = {
 			NOT = { has_global_flag = lock_inshore_fighter }
 			is_fighting_in_terrain = water_fjords
-		}
-		gain_xp_leader = {
-			NOT = { has_global_flag = lock_inshore_fighter }
 		}
 		
 		cost = 1000
@@ -2767,9 +2692,6 @@ leader_traits = {
 		gain_xp = {
 			NOT = { has_global_flag = lock_blue_water_expert }
 			is_fighting_in_terrain = water_deep_ocean
-		}
-		gain_xp_leader = {
-			NOT = { has_global_flag = lock_blue_water_expert }
 		}
 		
 		cost = 1000
@@ -2799,9 +2721,6 @@ leader_traits = {
 		gain_xp = {
 			NOT = { has_global_flag = lock_green_water_expert }
 			is_fighting_in_terrain = water_shallow_sea
-		}
-		gain_xp_leader = {
-			NOT = { has_global_flag = lock_green_water_expert }
 		}
 		
 		cost = 1000
