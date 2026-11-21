@@ -1,0 +1,53 @@
+﻿l_simp_chinese:
+ trait_locker_category: "将领特质锁定管理"
+ open_trait_locker_decision: "将领特质刷取锁定管理器"
+
+ TRAIT_LOCKER_WINDOW_TITLE: "将领特质刷取锁定"
+
+ TRAIT_LOCKER_TAB_ARMY: "陆军作战 (10)"
+ TRAIT_LOCKER_TAB_TERRAIN: "地形特质 (8)"
+ TRAIT_LOCKER_TAB_NAVY: "海军特质 (10)"
+
+ TRAIT_LOCKER_BTN_LOCK_PAGE: "锁定本页特质"
+ TRAIT_LOCKER_BTN_UNLOCK_PAGE: "解锁本页特质"
+ TRAIT_LOCKER_BTN_LOCK_ALL: "全部锁定"
+ TRAIT_LOCKER_BTN_UNLOCK_ALL: "全部解锁"
+ TRAIT_LOCKER_LOCK_ALL_TT: "§Y全部锁定§!\n将所有28个可刷取的将领特质全部设置为§R锁定状态§!。"
+ TRAIT_LOCKER_UNLOCK_ALL_TT: "§Y全部解锁§!\n将所有28个将领特质全部恢复为§G正常获取状态§!。"
+
+ TRAIT_LOCKER_STATUS_UNLOCKED: "§G● 正常获取§!"
+ TRAIT_LOCKER_STATUS_LOCKED: "§R■ 刷取已锁§!"
+
+ TRAIT_LOCKER_CLICK_TO_LOCK: "§G当前状态：正常获取§!\n§Y点击锁定该特质§!"
+ TRAIT_LOCKER_CLICK_TO_UNLOCK: "§R当前状态：刷取已锁定§!\n§Y点击解除锁定§!"
+
+ TRAIT_LOCKER_NAME_infantry_leader: "步兵指挥官"
+ TRAIT_LOCKER_NAME_cavalry_leader: "骑兵指挥官"
+ TRAIT_LOCKER_NAME_panzer_leader: "装甲指挥官"
+ TRAIT_LOCKER_NAME_organizer: "组织专家"
+ TRAIT_LOCKER_NAME_trait_engineer: "工程师"
+ TRAIT_LOCKER_NAME_trickster: "奇谋百出"
+ TRAIT_LOCKER_NAME_skilled_staffer: "熟练参谋"
+ TRAIT_LOCKER_NAME_commando: "特战军官"
+ TRAIT_LOCKER_NAME_fortress_buster: "要塞克星"
+ TRAIT_LOCKER_NAME_naval_invader: "侵袭指挥官"
+
+ TRAIT_LOCKER_NAME_hill_fighter: "丘陵斗士"
+ TRAIT_LOCKER_NAME_trait_mountaineer: "山地专家"
+ TRAIT_LOCKER_NAME_urban_assault_specialist: "巷战专家"
+ TRAIT_LOCKER_NAME_jungle_rat: "丛林之鼠"
+ TRAIT_LOCKER_NAME_swamp_fox: "沼泽之狐"
+ TRAIT_LOCKER_NAME_desert_fox: "沙漠之狐"
+ TRAIT_LOCKER_NAME_winter_specialist: "凛冬悍将"
+ TRAIT_LOCKER_NAME_ranger: "林地游侠"
+
+ TRAIT_LOCKER_NAME_blockade_runner: "封锁穿行者"
+ TRAIT_LOCKER_NAME_seawolf: "深海幽狼"
+ TRAIT_LOCKER_NAME_fleet_protector: "舰队屏卫者"
+ TRAIT_LOCKER_NAME_superior_tactician: "战术大师"
+ TRAIT_LOCKER_NAME_air_controller: "制空专家"
+ TRAIT_LOCKER_NAME_ironside: "铁舰钢心"
+ TRAIT_LOCKER_NAME_arctic_water_expert: "冷水作战专家"
+ TRAIT_LOCKER_NAME_inshore_fighter: "近海作战专家"
+ TRAIT_LOCKER_NAME_blue_water_expert: "蓝水作战专家"
+ TRAIT_LOCKER_NAME_green_water_expert: "绿水作战专家"

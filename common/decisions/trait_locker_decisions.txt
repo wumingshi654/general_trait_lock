@@ -1,0 +1,33 @@
+trait_locker_category = {
+	open_trait_locker_decision = {
+		icon = generic_research
+		
+		allowed = {
+			always = yes
+		}
+		visible = {
+			is_ai = no
+		}
+		available = {
+			always = yes
+		}
+		
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 0
+		
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = trait_locker_ui_open }
+				clr_country_flag = trait_locker_ui_open
+			}
+			else = {
+				set_country_flag = trait_locker_ui_open
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

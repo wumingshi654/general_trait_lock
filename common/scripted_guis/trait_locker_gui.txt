@@ -1,0 +1,723 @@
+scripted_gui = {
+	trait_locker_window = {
+		context_type = player_context
+		parent_window_token = top_bar
+		window_name = "trait_locker_main_container"
+		visible = {
+			has_country_flag = trait_locker_ui_open
+		}
+
+		effects = {
+			close_button_click = {
+				clr_country_flag = trait_locker_ui_open
+			}
+
+			btn_tab_army_click = {
+				clr_country_flag = trait_locker_tab_terrain
+				clr_country_flag = trait_locker_tab_navy
+				set_country_flag = trait_locker_tab_army
+			}
+			btn_tab_terrain_click = {
+				clr_country_flag = trait_locker_tab_army
+				clr_country_flag = trait_locker_tab_navy
+				set_country_flag = trait_locker_tab_terrain
+			}
+			btn_tab_navy_click = {
+				clr_country_flag = trait_locker_tab_army
+				clr_country_flag = trait_locker_tab_terrain
+				set_country_flag = trait_locker_tab_navy
+			}
+
+			btn_lock_page_click = {
+				if = {
+					limit = { has_country_flag = trait_locker_tab_terrain }
+					set_country_flag = lock_hill_fighter
+					set_global_flag = lock_hill_fighter
+					set_country_flag = lock_trait_mountaineer
+					set_global_flag = lock_trait_mountaineer
+					set_country_flag = lock_urban_assault_specialist
+					set_global_flag = lock_urban_assault_specialist
+					set_country_flag = lock_jungle_rat
+					set_global_flag = lock_jungle_rat
+					set_country_flag = lock_swamp_fox
+					set_global_flag = lock_swamp_fox
+					set_country_flag = lock_desert_fox
+					set_global_flag = lock_desert_fox
+					set_country_flag = lock_winter_specialist
+					set_global_flag = lock_winter_specialist
+					set_country_flag = lock_ranger
+					set_global_flag = lock_ranger
+				}
+				else_if = {
+					limit = { has_country_flag = trait_locker_tab_navy }
+					set_country_flag = lock_blockade_runner
+					set_global_flag = lock_blockade_runner
+					set_country_flag = lock_seawolf
+					set_global_flag = lock_seawolf
+					set_country_flag = lock_fleet_protector
+					set_global_flag = lock_fleet_protector
+					set_country_flag = lock_superior_tactician
+					set_global_flag = lock_superior_tactician
+					set_country_flag = lock_air_controller
+					set_global_flag = lock_air_controller
+					set_country_flag = lock_ironside
+					set_global_flag = lock_ironside
+					set_country_flag = lock_arctic_water_expert
+					set_global_flag = lock_arctic_water_expert
+					set_country_flag = lock_inshore_fighter
+					set_global_flag = lock_inshore_fighter
+					set_country_flag = lock_blue_water_expert
+					set_global_flag = lock_blue_water_expert
+					set_country_flag = lock_green_water_expert
+					set_global_flag = lock_green_water_expert
+				}
+				else = {
+					set_country_flag = lock_infantry_leader
+					set_global_flag = lock_infantry_leader
+					set_country_flag = lock_cavalry_leader
+					set_global_flag = lock_cavalry_leader
+					set_country_flag = lock_panzer_leader
+					set_global_flag = lock_panzer_leader
+					set_country_flag = lock_organizer
+					set_global_flag = lock_organizer
+					set_country_flag = lock_trait_engineer
+					set_global_flag = lock_trait_engineer
+					set_country_flag = lock_trickster
+					set_global_flag = lock_trickster
+					set_country_flag = lock_skilled_staffer
+					set_global_flag = lock_skilled_staffer
+					set_country_flag = lock_commando
+					set_global_flag = lock_commando
+					set_country_flag = lock_fortress_buster
+					set_global_flag = lock_fortress_buster
+					set_country_flag = lock_naval_invader
+					set_global_flag = lock_naval_invader
+				}
+			}
+
+			btn_unlock_page_click = {
+				if = {
+					limit = { has_country_flag = trait_locker_tab_terrain }
+					clr_country_flag = lock_hill_fighter
+					clr_global_flag = lock_hill_fighter
+					clr_country_flag = lock_trait_mountaineer
+					clr_global_flag = lock_trait_mountaineer
+					clr_country_flag = lock_urban_assault_specialist
+					clr_global_flag = lock_urban_assault_specialist
+					clr_country_flag = lock_jungle_rat
+					clr_global_flag = lock_jungle_rat
+					clr_country_flag = lock_swamp_fox
+					clr_global_flag = lock_swamp_fox
+					clr_country_flag = lock_desert_fox
+					clr_global_flag = lock_desert_fox
+					clr_country_flag = lock_winter_specialist
+					clr_global_flag = lock_winter_specialist
+					clr_country_flag = lock_ranger
+					clr_global_flag = lock_ranger
+				}
+				else_if = {
+					limit = { has_country_flag = trait_locker_tab_navy }
+					clr_country_flag = lock_blockade_runner
+					clr_global_flag = lock_blockade_runner
+					clr_country_flag = lock_seawolf
+					clr_global_flag = lock_seawolf
+					clr_country_flag = lock_fleet_protector
+					clr_global_flag = lock_fleet_protector
+					clr_country_flag = lock_superior_tactician
+					clr_global_flag = lock_superior_tactician
+					clr_country_flag = lock_air_controller
+					clr_global_flag = lock_air_controller
+					clr_country_flag = lock_ironside
+					clr_global_flag = lock_ironside
+					clr_country_flag = lock_arctic_water_expert
+					clr_global_flag = lock_arctic_water_expert
+					clr_country_flag = lock_inshore_fighter
+					clr_global_flag = lock_inshore_fighter
+					clr_country_flag = lock_blue_water_expert
+					clr_global_flag = lock_blue_water_expert
+					clr_country_flag = lock_green_water_expert
+					clr_global_flag = lock_green_water_expert
+				}
+				else = {
+					clr_country_flag = lock_infantry_leader
+					clr_global_flag = lock_infantry_leader
+					clr_country_flag = lock_cavalry_leader
+					clr_global_flag = lock_cavalry_leader
+					clr_country_flag = lock_panzer_leader
+					clr_global_flag = lock_panzer_leader
+					clr_country_flag = lock_organizer
+					clr_global_flag = lock_organizer
+					clr_country_flag = lock_trait_engineer
+					clr_global_flag = lock_trait_engineer
+					clr_country_flag = lock_trickster
+					clr_global_flag = lock_trickster
+					clr_country_flag = lock_skilled_staffer
+					clr_global_flag = lock_skilled_staffer
+					clr_country_flag = lock_commando
+					clr_global_flag = lock_commando
+					clr_country_flag = lock_fortress_buster
+					clr_global_flag = lock_fortress_buster
+					clr_country_flag = lock_naval_invader
+					clr_global_flag = lock_naval_invader
+				}
+			}
+
+			btn_lock_all_click = {
+				set_country_flag = lock_infantry_leader
+				set_global_flag = lock_infantry_leader
+				set_country_flag = lock_cavalry_leader
+				set_global_flag = lock_cavalry_leader
+				set_country_flag = lock_panzer_leader
+				set_global_flag = lock_panzer_leader
+				set_country_flag = lock_organizer
+				set_global_flag = lock_organizer
+				set_country_flag = lock_trait_engineer
+				set_global_flag = lock_trait_engineer
+				set_country_flag = lock_trickster
+				set_global_flag = lock_trickster
+				set_country_flag = lock_skilled_staffer
+				set_global_flag = lock_skilled_staffer
+				set_country_flag = lock_commando
+				set_global_flag = lock_commando
+				set_country_flag = lock_fortress_buster
+				set_global_flag = lock_fortress_buster
+				set_country_flag = lock_naval_invader
+				set_global_flag = lock_naval_invader
+				set_country_flag = lock_hill_fighter
+				set_global_flag = lock_hill_fighter
+				set_country_flag = lock_trait_mountaineer
+				set_global_flag = lock_trait_mountaineer
+				set_country_flag = lock_urban_assault_specialist
+				set_global_flag = lock_urban_assault_specialist
+				set_country_flag = lock_jungle_rat
+				set_global_flag = lock_jungle_rat
+				set_country_flag = lock_swamp_fox
+				set_global_flag = lock_swamp_fox
+				set_country_flag = lock_desert_fox
+				set_global_flag = lock_desert_fox
+				set_country_flag = lock_winter_specialist
+				set_global_flag = lock_winter_specialist
+				set_country_flag = lock_ranger
+				set_global_flag = lock_ranger
+				set_country_flag = lock_blockade_runner
+				set_global_flag = lock_blockade_runner
+				set_country_flag = lock_seawolf
+				set_global_flag = lock_seawolf
+				set_country_flag = lock_fleet_protector
+				set_global_flag = lock_fleet_protector
+				set_country_flag = lock_superior_tactician
+				set_global_flag = lock_superior_tactician
+				set_country_flag = lock_air_controller
+				set_global_flag = lock_air_controller
+				set_country_flag = lock_ironside
+				set_global_flag = lock_ironside
+				set_country_flag = lock_arctic_water_expert
+				set_global_flag = lock_arctic_water_expert
+				set_country_flag = lock_inshore_fighter
+				set_global_flag = lock_inshore_fighter
+				set_country_flag = lock_blue_water_expert
+				set_global_flag = lock_blue_water_expert
+				set_country_flag = lock_green_water_expert
+				set_global_flag = lock_green_water_expert
+			}
+			btn_unlock_all_click = {
+				clr_country_flag = lock_infantry_leader
+				clr_global_flag = lock_infantry_leader
+				clr_country_flag = lock_cavalry_leader
+				clr_global_flag = lock_cavalry_leader
+				clr_country_flag = lock_panzer_leader
+				clr_global_flag = lock_panzer_leader
+				clr_country_flag = lock_organizer
+				clr_global_flag = lock_organizer
+				clr_country_flag = lock_trait_engineer
+				clr_global_flag = lock_trait_engineer
+				clr_country_flag = lock_trickster
+				clr_global_flag = lock_trickster
+				clr_country_flag = lock_skilled_staffer
+				clr_global_flag = lock_skilled_staffer
+				clr_country_flag = lock_commando
+				clr_global_flag = lock_commando
+				clr_country_flag = lock_fortress_buster
+				clr_global_flag = lock_fortress_buster
+				clr_country_flag = lock_naval_invader
+				clr_global_flag = lock_naval_invader
+				clr_country_flag = lock_hill_fighter
+				clr_global_flag = lock_hill_fighter
+				clr_country_flag = lock_trait_mountaineer
+				clr_global_flag = lock_trait_mountaineer
+				clr_country_flag = lock_urban_assault_specialist
+				clr_global_flag = lock_urban_assault_specialist
+				clr_country_flag = lock_jungle_rat
+				clr_global_flag = lock_jungle_rat
+				clr_country_flag = lock_swamp_fox
+				clr_global_flag = lock_swamp_fox
+				clr_country_flag = lock_desert_fox
+				clr_global_flag = lock_desert_fox
+				clr_country_flag = lock_winter_specialist
+				clr_global_flag = lock_winter_specialist
+				clr_country_flag = lock_ranger
+				clr_global_flag = lock_ranger
+				clr_country_flag = lock_blockade_runner
+				clr_global_flag = lock_blockade_runner
+				clr_country_flag = lock_seawolf
+				clr_global_flag = lock_seawolf
+				clr_country_flag = lock_fleet_protector
+				clr_global_flag = lock_fleet_protector
+				clr_country_flag = lock_superior_tactician
+				clr_global_flag = lock_superior_tactician
+				clr_country_flag = lock_air_controller
+				clr_global_flag = lock_air_controller
+				clr_country_flag = lock_ironside
+				clr_global_flag = lock_ironside
+				clr_country_flag = lock_arctic_water_expert
+				clr_global_flag = lock_arctic_water_expert
+				clr_country_flag = lock_inshore_fighter
+				clr_global_flag = lock_inshore_fighter
+				clr_country_flag = lock_blue_water_expert
+				clr_global_flag = lock_blue_water_expert
+				clr_country_flag = lock_green_water_expert
+				clr_global_flag = lock_green_water_expert
+			}
+
+			btn_lock_infantry_leader_off_click = {
+				set_country_flag = lock_infantry_leader
+				set_global_flag = lock_infantry_leader
+			}
+			btn_lock_infantry_leader_on_click = {
+				clr_country_flag = lock_infantry_leader
+				clr_global_flag = lock_infantry_leader
+			}
+			btn_lock_cavalry_leader_off_click = {
+				set_country_flag = lock_cavalry_leader
+				set_global_flag = lock_cavalry_leader
+			}
+			btn_lock_cavalry_leader_on_click = {
+				clr_country_flag = lock_cavalry_leader
+				clr_global_flag = lock_cavalry_leader
+			}
+			btn_lock_panzer_leader_off_click = {
+				set_country_flag = lock_panzer_leader
+				set_global_flag = lock_panzer_leader
+			}
+			btn_lock_panzer_leader_on_click = {
+				clr_country_flag = lock_panzer_leader
+				clr_global_flag = lock_panzer_leader
+			}
+			btn_lock_organizer_off_click = {
+				set_country_flag = lock_organizer
+				set_global_flag = lock_organizer
+			}
+			btn_lock_organizer_on_click = {
+				clr_country_flag = lock_organizer
+				clr_global_flag = lock_organizer
+			}
+			btn_lock_trait_engineer_off_click = {
+				set_country_flag = lock_trait_engineer
+				set_global_flag = lock_trait_engineer
+			}
+			btn_lock_trait_engineer_on_click = {
+				clr_country_flag = lock_trait_engineer
+				clr_global_flag = lock_trait_engineer
+			}
+			btn_lock_trickster_off_click = {
+				set_country_flag = lock_trickster
+				set_global_flag = lock_trickster
+			}
+			btn_lock_trickster_on_click = {
+				clr_country_flag = lock_trickster
+				clr_global_flag = lock_trickster
+			}
+			btn_lock_skilled_staffer_off_click = {
+				set_country_flag = lock_skilled_staffer
+				set_global_flag = lock_skilled_staffer
+			}
+			btn_lock_skilled_staffer_on_click = {
+				clr_country_flag = lock_skilled_staffer
+				clr_global_flag = lock_skilled_staffer
+			}
+			btn_lock_commando_off_click = {
+				set_country_flag = lock_commando
+				set_global_flag = lock_commando
+			}
+			btn_lock_commando_on_click = {
+				clr_country_flag = lock_commando
+				clr_global_flag = lock_commando
+			}
+			btn_lock_fortress_buster_off_click = {
+				set_country_flag = lock_fortress_buster
+				set_global_flag = lock_fortress_buster
+			}
+			btn_lock_fortress_buster_on_click = {
+				clr_country_flag = lock_fortress_buster
+				clr_global_flag = lock_fortress_buster
+			}
+			btn_lock_naval_invader_off_click = {
+				set_country_flag = lock_naval_invader
+				set_global_flag = lock_naval_invader
+			}
+			btn_lock_naval_invader_on_click = {
+				clr_country_flag = lock_naval_invader
+				clr_global_flag = lock_naval_invader
+			}
+			btn_lock_hill_fighter_off_click = {
+				set_country_flag = lock_hill_fighter
+				set_global_flag = lock_hill_fighter
+			}
+			btn_lock_hill_fighter_on_click = {
+				clr_country_flag = lock_hill_fighter
+				clr_global_flag = lock_hill_fighter
+			}
+			btn_lock_trait_mountaineer_off_click = {
+				set_country_flag = lock_trait_mountaineer
+				set_global_flag = lock_trait_mountaineer
+			}
+			btn_lock_trait_mountaineer_on_click = {
+				clr_country_flag = lock_trait_mountaineer
+				clr_global_flag = lock_trait_mountaineer
+			}
+			btn_lock_urban_assault_specialist_off_click = {
+				set_country_flag = lock_urban_assault_specialist
+				set_global_flag = lock_urban_assault_specialist
+			}
+			btn_lock_urban_assault_specialist_on_click = {
+				clr_country_flag = lock_urban_assault_specialist
+				clr_global_flag = lock_urban_assault_specialist
+			}
+			btn_lock_jungle_rat_off_click = {
+				set_country_flag = lock_jungle_rat
+				set_global_flag = lock_jungle_rat
+			}
+			btn_lock_jungle_rat_on_click = {
+				clr_country_flag = lock_jungle_rat
+				clr_global_flag = lock_jungle_rat
+			}
+			btn_lock_swamp_fox_off_click = {
+				set_country_flag = lock_swamp_fox
+				set_global_flag = lock_swamp_fox
+			}
+			btn_lock_swamp_fox_on_click = {
+				clr_country_flag = lock_swamp_fox
+				clr_global_flag = lock_swamp_fox
+			}
+			btn_lock_desert_fox_off_click = {
+				set_country_flag = lock_desert_fox
+				set_global_flag = lock_desert_fox
+			}
+			btn_lock_desert_fox_on_click = {
+				clr_country_flag = lock_desert_fox
+				clr_global_flag = lock_desert_fox
+			}
+			btn_lock_winter_specialist_off_click = {
+				set_country_flag = lock_winter_specialist
+				set_global_flag = lock_winter_specialist
+			}
+			btn_lock_winter_specialist_on_click = {
+				clr_country_flag = lock_winter_specialist
+				clr_global_flag = lock_winter_specialist
+			}
+			btn_lock_ranger_off_click = {
+				set_country_flag = lock_ranger
+				set_global_flag = lock_ranger
+			}
+			btn_lock_ranger_on_click = {
+				clr_country_flag = lock_ranger
+				clr_global_flag = lock_ranger
+			}
+			btn_lock_blockade_runner_off_click = {
+				set_country_flag = lock_blockade_runner
+				set_global_flag = lock_blockade_runner
+			}
+			btn_lock_blockade_runner_on_click = {
+				clr_country_flag = lock_blockade_runner
+				clr_global_flag = lock_blockade_runner
+			}
+			btn_lock_seawolf_off_click = {
+				set_country_flag = lock_seawolf
+				set_global_flag = lock_seawolf
+			}
+			btn_lock_seawolf_on_click = {
+				clr_country_flag = lock_seawolf
+				clr_global_flag = lock_seawolf
+			}
+			btn_lock_fleet_protector_off_click = {
+				set_country_flag = lock_fleet_protector
+				set_global_flag = lock_fleet_protector
+			}
+			btn_lock_fleet_protector_on_click = {
+				clr_country_flag = lock_fleet_protector
+				clr_global_flag = lock_fleet_protector
+			}
+			btn_lock_superior_tactician_off_click = {
+				set_country_flag = lock_superior_tactician
+				set_global_flag = lock_superior_tactician
+			}
+			btn_lock_superior_tactician_on_click = {
+				clr_country_flag = lock_superior_tactician
+				clr_global_flag = lock_superior_tactician
+			}
+			btn_lock_air_controller_off_click = {
+				set_country_flag = lock_air_controller
+				set_global_flag = lock_air_controller
+			}
+			btn_lock_air_controller_on_click = {
+				clr_country_flag = lock_air_controller
+				clr_global_flag = lock_air_controller
+			}
+			btn_lock_ironside_off_click = {
+				set_country_flag = lock_ironside
+				set_global_flag = lock_ironside
+			}
+			btn_lock_ironside_on_click = {
+				clr_country_flag = lock_ironside
+				clr_global_flag = lock_ironside
+			}
+			btn_lock_arctic_water_expert_off_click = {
+				set_country_flag = lock_arctic_water_expert
+				set_global_flag = lock_arctic_water_expert
+			}
+			btn_lock_arctic_water_expert_on_click = {
+				clr_country_flag = lock_arctic_water_expert
+				clr_global_flag = lock_arctic_water_expert
+			}
+			btn_lock_inshore_fighter_off_click = {
+				set_country_flag = lock_inshore_fighter
+				set_global_flag = lock_inshore_fighter
+			}
+			btn_lock_inshore_fighter_on_click = {
+				clr_country_flag = lock_inshore_fighter
+				clr_global_flag = lock_inshore_fighter
+			}
+			btn_lock_blue_water_expert_off_click = {
+				set_country_flag = lock_blue_water_expert
+				set_global_flag = lock_blue_water_expert
+			}
+			btn_lock_blue_water_expert_on_click = {
+				clr_country_flag = lock_blue_water_expert
+				clr_global_flag = lock_blue_water_expert
+			}
+			btn_lock_green_water_expert_off_click = {
+				set_country_flag = lock_green_water_expert
+				set_global_flag = lock_green_water_expert
+			}
+			btn_lock_green_water_expert_on_click = {
+				clr_country_flag = lock_green_water_expert
+				clr_global_flag = lock_green_water_expert
+			}
+		}
+
+		triggers = {
+			tab_army_visible = {
+				OR = {
+					has_country_flag = trait_locker_tab_army
+					AND = {
+						NOT = { has_country_flag = trait_locker_tab_terrain }
+						NOT = { has_country_flag = trait_locker_tab_navy }
+					}
+				}
+			}
+			tab_terrain_visible = {
+				has_country_flag = trait_locker_tab_terrain
+			}
+			tab_navy_visible = {
+				has_country_flag = trait_locker_tab_navy
+			}
+
+			bg_infantry_leader_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			icon_infantry_leader_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			name_infantry_leader_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			status_unlocked_infantry_leader_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } NOT = { has_global_flag = lock_infantry_leader } }
+			status_locked_infantry_leader_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } has_global_flag = lock_infantry_leader }
+			btn_lock_infantry_leader_off_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } NOT = { has_global_flag = lock_infantry_leader } }
+			btn_lock_infantry_leader_on_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } has_global_flag = lock_infantry_leader }
+			bg_cavalry_leader_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			icon_cavalry_leader_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			name_cavalry_leader_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			status_unlocked_cavalry_leader_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } NOT = { has_global_flag = lock_cavalry_leader } }
+			status_locked_cavalry_leader_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } has_global_flag = lock_cavalry_leader }
+			btn_lock_cavalry_leader_off_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } NOT = { has_global_flag = lock_cavalry_leader } }
+			btn_lock_cavalry_leader_on_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } has_global_flag = lock_cavalry_leader }
+			bg_panzer_leader_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			icon_panzer_leader_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			name_panzer_leader_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			status_unlocked_panzer_leader_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } NOT = { has_global_flag = lock_panzer_leader } }
+			status_locked_panzer_leader_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } has_global_flag = lock_panzer_leader }
+			btn_lock_panzer_leader_off_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } NOT = { has_global_flag = lock_panzer_leader } }
+			btn_lock_panzer_leader_on_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } has_global_flag = lock_panzer_leader }
+			bg_organizer_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			icon_organizer_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			name_organizer_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			status_unlocked_organizer_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } NOT = { has_global_flag = lock_organizer } }
+			status_locked_organizer_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } has_global_flag = lock_organizer }
+			btn_lock_organizer_off_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } NOT = { has_global_flag = lock_organizer } }
+			btn_lock_organizer_on_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } has_global_flag = lock_organizer }
+			bg_trait_engineer_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			icon_trait_engineer_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			name_trait_engineer_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			status_unlocked_trait_engineer_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } NOT = { has_global_flag = lock_trait_engineer } }
+			status_locked_trait_engineer_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } has_global_flag = lock_trait_engineer }
+			btn_lock_trait_engineer_off_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } NOT = { has_global_flag = lock_trait_engineer } }
+			btn_lock_trait_engineer_on_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } has_global_flag = lock_trait_engineer }
+			bg_trickster_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			icon_trickster_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			name_trickster_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			status_unlocked_trickster_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } NOT = { has_global_flag = lock_trickster } }
+			status_locked_trickster_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } has_global_flag = lock_trickster }
+			btn_lock_trickster_off_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } NOT = { has_global_flag = lock_trickster } }
+			btn_lock_trickster_on_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } has_global_flag = lock_trickster }
+			bg_skilled_staffer_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			icon_skilled_staffer_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			name_skilled_staffer_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			status_unlocked_skilled_staffer_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } NOT = { has_global_flag = lock_skilled_staffer } }
+			status_locked_skilled_staffer_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } has_global_flag = lock_skilled_staffer }
+			btn_lock_skilled_staffer_off_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } NOT = { has_global_flag = lock_skilled_staffer } }
+			btn_lock_skilled_staffer_on_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } has_global_flag = lock_skilled_staffer }
+			bg_commando_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			icon_commando_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			name_commando_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			status_unlocked_commando_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } NOT = { has_global_flag = lock_commando } }
+			status_locked_commando_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } has_global_flag = lock_commando }
+			btn_lock_commando_off_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } NOT = { has_global_flag = lock_commando } }
+			btn_lock_commando_on_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } has_global_flag = lock_commando }
+			bg_fortress_buster_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			icon_fortress_buster_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			name_fortress_buster_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			status_unlocked_fortress_buster_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } NOT = { has_global_flag = lock_fortress_buster } }
+			status_locked_fortress_buster_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } has_global_flag = lock_fortress_buster }
+			btn_lock_fortress_buster_off_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } NOT = { has_global_flag = lock_fortress_buster } }
+			btn_lock_fortress_buster_on_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } has_global_flag = lock_fortress_buster }
+			bg_naval_invader_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			icon_naval_invader_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			name_naval_invader_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } }
+			status_unlocked_naval_invader_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } NOT = { has_global_flag = lock_naval_invader } }
+			status_locked_naval_invader_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } has_global_flag = lock_naval_invader }
+			btn_lock_naval_invader_off_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } NOT = { has_global_flag = lock_naval_invader } }
+			btn_lock_naval_invader_on_visible = { OR = { has_country_flag = trait_locker_tab_army AND = { NOT = { has_country_flag = trait_locker_tab_terrain } NOT = { has_country_flag = trait_locker_tab_navy } } } has_global_flag = lock_naval_invader }
+			bg_hill_fighter_visible = { has_country_flag = trait_locker_tab_terrain }
+			icon_hill_fighter_visible = { has_country_flag = trait_locker_tab_terrain }
+			name_hill_fighter_visible = { has_country_flag = trait_locker_tab_terrain }
+			status_unlocked_hill_fighter_visible = { has_country_flag = trait_locker_tab_terrain NOT = { has_global_flag = lock_hill_fighter } }
+			status_locked_hill_fighter_visible = { has_country_flag = trait_locker_tab_terrain has_global_flag = lock_hill_fighter }
+			btn_lock_hill_fighter_off_visible = { has_country_flag = trait_locker_tab_terrain NOT = { has_global_flag = lock_hill_fighter } }
+			btn_lock_hill_fighter_on_visible = { has_country_flag = trait_locker_tab_terrain has_global_flag = lock_hill_fighter }
+			bg_trait_mountaineer_visible = { has_country_flag = trait_locker_tab_terrain }
+			icon_trait_mountaineer_visible = { has_country_flag = trait_locker_tab_terrain }
+			name_trait_mountaineer_visible = { has_country_flag = trait_locker_tab_terrain }
+			status_unlocked_trait_mountaineer_visible = { has_country_flag = trait_locker_tab_terrain NOT = { has_global_flag = lock_trait_mountaineer } }
+			status_locked_trait_mountaineer_visible = { has_country_flag = trait_locker_tab_terrain has_global_flag = lock_trait_mountaineer }
+			btn_lock_trait_mountaineer_off_visible = { has_country_flag = trait_locker_tab_terrain NOT = { has_global_flag = lock_trait_mountaineer } }
+			btn_lock_trait_mountaineer_on_visible = { has_country_flag = trait_locker_tab_terrain has_global_flag = lock_trait_mountaineer }
+			bg_urban_assault_specialist_visible = { has_country_flag = trait_locker_tab_terrain }
+			icon_urban_assault_specialist_visible = { has_country_flag = trait_locker_tab_terrain }
+			name_urban_assault_specialist_visible = { has_country_flag = trait_locker_tab_terrain }
+			status_unlocked_urban_assault_specialist_visible = { has_country_flag = trait_locker_tab_terrain NOT = { has_global_flag = lock_urban_assault_specialist } }
+			status_locked_urban_assault_specialist_visible = { has_country_flag = trait_locker_tab_terrain has_global_flag = lock_urban_assault_specialist }
+			btn_lock_urban_assault_specialist_off_visible = { has_country_flag = trait_locker_tab_terrain NOT = { has_global_flag = lock_urban_assault_specialist } }
+			btn_lock_urban_assault_specialist_on_visible = { has_country_flag = trait_locker_tab_terrain has_global_flag = lock_urban_assault_specialist }
+			bg_jungle_rat_visible = { has_country_flag = trait_locker_tab_terrain }
+			icon_jungle_rat_visible = { has_country_flag = trait_locker_tab_terrain }
+			name_jungle_rat_visible = { has_country_flag = trait_locker_tab_terrain }
+			status_unlocked_jungle_rat_visible = { has_country_flag = trait_locker_tab_terrain NOT = { has_global_flag = lock_jungle_rat } }
+			status_locked_jungle_rat_visible = { has_country_flag = trait_locker_tab_terrain has_global_flag = lock_jungle_rat }
+			btn_lock_jungle_rat_off_visible = { has_country_flag = trait_locker_tab_terrain NOT = { has_global_flag = lock_jungle_rat } }
+			btn_lock_jungle_rat_on_visible = { has_country_flag = trait_locker_tab_terrain has_global_flag = lock_jungle_rat }
+			bg_swamp_fox_visible = { has_country_flag = trait_locker_tab_terrain }
+			icon_swamp_fox_visible = { has_country_flag = trait_locker_tab_terrain }
+			name_swamp_fox_visible = { has_country_flag = trait_locker_tab_terrain }
+			status_unlocked_swamp_fox_visible = { has_country_flag = trait_locker_tab_terrain NOT = { has_global_flag = lock_swamp_fox } }
+			status_locked_swamp_fox_visible = { has_country_flag = trait_locker_tab_terrain has_global_flag = lock_swamp_fox }
+			btn_lock_swamp_fox_off_visible = { has_country_flag = trait_locker_tab_terrain NOT = { has_global_flag = lock_swamp_fox } }
+			btn_lock_swamp_fox_on_visible = { has_country_flag = trait_locker_tab_terrain has_global_flag = lock_swamp_fox }
+			bg_desert_fox_visible = { has_country_flag = trait_locker_tab_terrain }
+			icon_desert_fox_visible = { has_country_flag = trait_locker_tab_terrain }
+			name_desert_fox_visible = { has_country_flag = trait_locker_tab_terrain }
+			status_unlocked_desert_fox_visible = { has_country_flag = trait_locker_tab_terrain NOT = { has_global_flag = lock_desert_fox } }
+			status_locked_desert_fox_visible = { has_country_flag = trait_locker_tab_terrain has_global_flag = lock_desert_fox }
+			btn_lock_desert_fox_off_visible = { has_country_flag = trait_locker_tab_terrain NOT = { has_global_flag = lock_desert_fox } }
+			btn_lock_desert_fox_on_visible = { has_country_flag = trait_locker_tab_terrain has_global_flag = lock_desert_fox }
+			bg_winter_specialist_visible = { has_country_flag = trait_locker_tab_terrain }
+			icon_winter_specialist_visible = { has_country_flag = trait_locker_tab_terrain }
+			name_winter_specialist_visible = { has_country_flag = trait_locker_tab_terrain }
+			status_unlocked_winter_specialist_visible = { has_country_flag = trait_locker_tab_terrain NOT = { has_global_flag = lock_winter_specialist } }
+			status_locked_winter_specialist_visible = { has_country_flag = trait_locker_tab_terrain has_global_flag = lock_winter_specialist }
+			btn_lock_winter_specialist_off_visible = { has_country_flag = trait_locker_tab_terrain NOT = { has_global_flag = lock_winter_specialist } }
+			btn_lock_winter_specialist_on_visible = { has_country_flag = trait_locker_tab_terrain has_global_flag = lock_winter_specialist }
+			bg_ranger_visible = { has_country_flag = trait_locker_tab_terrain }
+			icon_ranger_visible = { has_country_flag = trait_locker_tab_terrain }
+			name_ranger_visible = { has_country_flag = trait_locker_tab_terrain }
+			status_unlocked_ranger_visible = { has_country_flag = trait_locker_tab_terrain NOT = { has_global_flag = lock_ranger } }
+			status_locked_ranger_visible = { has_country_flag = trait_locker_tab_terrain has_global_flag = lock_ranger }
+			btn_lock_ranger_off_visible = { has_country_flag = trait_locker_tab_terrain NOT = { has_global_flag = lock_ranger } }
+			btn_lock_ranger_on_visible = { has_country_flag = trait_locker_tab_terrain has_global_flag = lock_ranger }
+			bg_blockade_runner_visible = { has_country_flag = trait_locker_tab_navy }
+			icon_blockade_runner_visible = { has_country_flag = trait_locker_tab_navy }
+			name_blockade_runner_visible = { has_country_flag = trait_locker_tab_navy }
+			status_unlocked_blockade_runner_visible = { has_country_flag = trait_locker_tab_navy NOT = { has_global_flag = lock_blockade_runner } }
+			status_locked_blockade_runner_visible = { has_country_flag = trait_locker_tab_navy has_global_flag = lock_blockade_runner }
+			btn_lock_blockade_runner_off_visible = { has_country_flag = trait_locker_tab_navy NOT = { has_global_flag = lock_blockade_runner } }
+			btn_lock_blockade_runner_on_visible = { has_country_flag = trait_locker_tab_navy has_global_flag = lock_blockade_runner }
+			bg_seawolf_visible = { has_country_flag = trait_locker_tab_navy }
+			icon_seawolf_visible = { has_country_flag = trait_locker_tab_navy }
+			name_seawolf_visible = { has_country_flag = trait_locker_tab_navy }
+			status_unlocked_seawolf_visible = { has_country_flag = trait_locker_tab_navy NOT = { has_global_flag = lock_seawolf } }
+			status_locked_seawolf_visible = { has_country_flag = trait_locker_tab_navy has_global_flag = lock_seawolf }
+			btn_lock_seawolf_off_visible = { has_country_flag = trait_locker_tab_navy NOT = { has_global_flag = lock_seawolf } }
+			btn_lock_seawolf_on_visible = { has_country_flag = trait_locker_tab_navy has_global_flag = lock_seawolf }
+			bg_fleet_protector_visible = { has_country_flag = trait_locker_tab_navy }
+			icon_fleet_protector_visible = { has_country_flag = trait_locker_tab_navy }
+			name_fleet_protector_visible = { has_country_flag = trait_locker_tab_navy }
+			status_unlocked_fleet_protector_visible = { has_country_flag = trait_locker_tab_navy NOT = { has_global_flag = lock_fleet_protector } }
+			status_locked_fleet_protector_visible = { has_country_flag = trait_locker_tab_navy has_global_flag = lock_fleet_protector }
+			btn_lock_fleet_protector_off_visible = { has_country_flag = trait_locker_tab_navy NOT = { has_global_flag = lock_fleet_protector } }
+			btn_lock_fleet_protector_on_visible = { has_country_flag = trait_locker_tab_navy has_global_flag = lock_fleet_protector }
+			bg_superior_tactician_visible = { has_country_flag = trait_locker_tab_navy }
+			icon_superior_tactician_visible = { has_country_flag = trait_locker_tab_navy }
+			name_superior_tactician_visible = { has_country_flag = trait_locker_tab_navy }
+			status_unlocked_superior_tactician_visible = { has_country_flag = trait_locker_tab_navy NOT = { has_global_flag = lock_superior_tactician } }
+			status_locked_superior_tactician_visible = { has_country_flag = trait_locker_tab_navy has_global_flag = lock_superior_tactician }
+			btn_lock_superior_tactician_off_visible = { has_country_flag = trait_locker_tab_navy NOT = { has_global_flag = lock_superior_tactician } }
+			btn_lock_superior_tactician_on_visible = { has_country_flag = trait_locker_tab_navy has_global_flag = lock_superior_tactician }
+			bg_air_controller_visible = { has_country_flag = trait_locker_tab_navy }
+			icon_air_controller_visible = { has_country_flag = trait_locker_tab_navy }
+			name_air_controller_visible = { has_country_flag = trait_locker_tab_navy }
+			status_unlocked_air_controller_visible = { has_country_flag = trait_locker_tab_navy NOT = { has_global_flag = lock_air_controller } }
+			status_locked_air_controller_visible = { has_country_flag = trait_locker_tab_navy has_global_flag = lock_air_controller }
+			btn_lock_air_controller_off_visible = { has_country_flag = trait_locker_tab_navy NOT = { has_global_flag = lock_air_controller } }
+			btn_lock_air_controller_on_visible = { has_country_flag = trait_locker_tab_navy has_global_flag = lock_air_controller }
+			bg_ironside_visible = { has_country_flag = trait_locker_tab_navy }
+			icon_ironside_visible = { has_country_flag = trait_locker_tab_navy }
+			name_ironside_visible = { has_country_flag = trait_locker_tab_navy }
+			status_unlocked_ironside_visible = { has_country_flag = trait_locker_tab_navy NOT = { has_global_flag = lock_ironside } }
+			status_locked_ironside_visible = { has_country_flag = trait_locker_tab_navy has_global_flag = lock_ironside }
+			btn_lock_ironside_off_visible = { has_country_flag = trait_locker_tab_navy NOT = { has_global_flag = lock_ironside } }
+			btn_lock_ironside_on_visible = { has_country_flag = trait_locker_tab_navy has_global_flag = lock_ironside }
+			bg_arctic_water_expert_visible = { has_country_flag = trait_locker_tab_navy }
+			icon_arctic_water_expert_visible = { has_country_flag = trait_locker_tab_navy }
+			name_arctic_water_expert_visible = { has_country_flag = trait_locker_tab_navy }
+			status_unlocked_arctic_water_expert_visible = { has_country_flag = trait_locker_tab_navy NOT = { has_global_flag = lock_arctic_water_expert } }
+			status_locked_arctic_water_expert_visible = { has_country_flag = trait_locker_tab_navy has_global_flag = lock_arctic_water_expert }
+			btn_lock_arctic_water_expert_off_visible = { has_country_flag = trait_locker_tab_navy NOT = { has_global_flag = lock_arctic_water_expert } }
+			btn_lock_arctic_water_expert_on_visible = { has_country_flag = trait_locker_tab_navy has_global_flag = lock_arctic_water_expert }
+			bg_inshore_fighter_visible = { has_country_flag = trait_locker_tab_navy }
+			icon_inshore_fighter_visible = { has_country_flag = trait_locker_tab_navy }
+			name_inshore_fighter_visible = { has_country_flag = trait_locker_tab_navy }
+			status_unlocked_inshore_fighter_visible = { has_country_flag = trait_locker_tab_navy NOT = { has_global_flag = lock_inshore_fighter } }
+			status_locked_inshore_fighter_visible = { has_country_flag = trait_locker_tab_navy has_global_flag = lock_inshore_fighter }
+			btn_lock_inshore_fighter_off_visible = { has_country_flag = trait_locker_tab_navy NOT = { has_global_flag = lock_inshore_fighter } }
+			btn_lock_inshore_fighter_on_visible = { has_country_flag = trait_locker_tab_navy has_global_flag = lock_inshore_fighter }
+			bg_blue_water_expert_visible = { has_country_flag = trait_locker_tab_navy }
+			icon_blue_water_expert_visible = { has_country_flag = trait_locker_tab_navy }
+			name_blue_water_expert_visible = { has_country_flag = trait_locker_tab_navy }
+			status_unlocked_blue_water_expert_visible = { has_country_flag = trait_locker_tab_navy NOT = { has_global_flag = lock_blue_water_expert } }
+			status_locked_blue_water_expert_visible = { has_country_flag = trait_locker_tab_navy has_global_flag = lock_blue_water_expert }
+			btn_lock_blue_water_expert_off_visible = { has_country_flag = trait_locker_tab_navy NOT = { has_global_flag = lock_blue_water_expert } }
+			btn_lock_blue_water_expert_on_visible = { has_country_flag = trait_locker_tab_navy has_global_flag = lock_blue_water_expert }
+			bg_green_water_expert_visible = { has_country_flag = trait_locker_tab_navy }
+			icon_green_water_expert_visible = { has_country_flag = trait_locker_tab_navy }
+			name_green_water_expert_visible = { has_country_flag = trait_locker_tab_navy }
+			status_unlocked_green_water_expert_visible = { has_country_flag = trait_locker_tab_navy NOT = { has_global_flag = lock_green_water_expert } }
+			status_locked_green_water_expert_visible = { has_country_flag = trait_locker_tab_navy has_global_flag = lock_green_water_expert }
+			btn_lock_green_water_expert_off_visible = { has_country_flag = trait_locker_tab_navy NOT = { has_global_flag = lock_green_water_expert } }
+			btn_lock_green_water_expert_on_visible = { has_country_flag = trait_locker_tab_navy has_global_flag = lock_green_water_expert }
+		}
+	}
+}

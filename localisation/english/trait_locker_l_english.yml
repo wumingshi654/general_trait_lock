@@ -1,0 +1,53 @@
+﻿l_english:
+ trait_locker_category: "Trait Locker Management"
+ open_trait_locker_decision: "Unit Leader Trait Locker"
+
+ TRAIT_LOCKER_WINDOW_TITLE: "Unit Leader Trait Locker"
+
+ TRAIT_LOCKER_TAB_ARMY: "Army Combat (10)"
+ TRAIT_LOCKER_TAB_TERRAIN: "Terrain (8)"
+ TRAIT_LOCKER_TAB_NAVY: "Navy (10)"
+
+ TRAIT_LOCKER_BTN_LOCK_PAGE: "Lock Page"
+ TRAIT_LOCKER_BTN_UNLOCK_PAGE: "Unlock Page"
+ TRAIT_LOCKER_BTN_LOCK_ALL: "Lock All"
+ TRAIT_LOCKER_BTN_UNLOCK_ALL: "Unlock All"
+ TRAIT_LOCKER_LOCK_ALL_TT: "§YLock All§!\nSet all 28 gainable unit leader traits to §RLocked§!."
+ TRAIT_LOCKER_UNLOCK_ALL_TT: "§YUnlock All§!\nRestore all 28 unit leader traits to §GNormal Gain§!."
+
+ TRAIT_LOCKER_STATUS_UNLOCKED: "§G● Available§!"
+ TRAIT_LOCKER_STATUS_LOCKED: "§R■ Locked§!"
+
+ TRAIT_LOCKER_CLICK_TO_LOCK: "§GStatus: Available§!\n§YClick to Lock§!"
+ TRAIT_LOCKER_CLICK_TO_UNLOCK: "§RStatus: Locked§!\n§YClick to Unlock§!"
+
+ TRAIT_LOCKER_NAME_infantry_leader: "Infantry Leader"
+ TRAIT_LOCKER_NAME_cavalry_leader: "Cavalry Leader"
+ TRAIT_LOCKER_NAME_panzer_leader: "Panzer Leader"
+ TRAIT_LOCKER_NAME_organizer: "Organizer"
+ TRAIT_LOCKER_NAME_trait_engineer: "Engineer"
+ TRAIT_LOCKER_NAME_trickster: "Trickster"
+ TRAIT_LOCKER_NAME_skilled_staffer: "Skilled Staffer"
+ TRAIT_LOCKER_NAME_commando: "Commando"
+ TRAIT_LOCKER_NAME_fortress_buster: "Fortress Buster"
+ TRAIT_LOCKER_NAME_naval_invader: "Naval Invader"
+
+ TRAIT_LOCKER_NAME_hill_fighter: "Hill Fighter"
+ TRAIT_LOCKER_NAME_trait_mountaineer: "Mountaineer"
+ TRAIT_LOCKER_NAME_urban_assault_specialist: "Urban Assault Specialist"
+ TRAIT_LOCKER_NAME_jungle_rat: "Jungle Rat"
+ TRAIT_LOCKER_NAME_swamp_fox: "Swamp Fox"
+ TRAIT_LOCKER_NAME_desert_fox: "Desert Fox"
+ TRAIT_LOCKER_NAME_winter_specialist: "Winter Specialist"
+ TRAIT_LOCKER_NAME_ranger: "Ranger"
+
+ TRAIT_LOCKER_NAME_blockade_runner: "Blockade Runner"
+ TRAIT_LOCKER_NAME_seawolf: "Sea Wolf"
+ TRAIT_LOCKER_NAME_fleet_protector: "Fleet Protector"
+ TRAIT_LOCKER_NAME_superior_tactician: "Superior Tactician"
+ TRAIT_LOCKER_NAME_air_controller: "Air Controller"
+ TRAIT_LOCKER_NAME_ironside: "Ironside"
+ TRAIT_LOCKER_NAME_arctic_water_expert: "Arctic Water Expert"
+ TRAIT_LOCKER_NAME_inshore_fighter: "Inshore Fighter"
+ TRAIT_LOCKER_NAME_blue_water_expert: "Blue Water Expert"
+ TRAIT_LOCKER_NAME_green_water_expert: "Green Water Expert"

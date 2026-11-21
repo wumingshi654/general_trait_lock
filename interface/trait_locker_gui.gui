@@ -1,0 +1,1726 @@
+guiTypes = {
+	containerWindowType = {
+		name = "trait_locker_main_container"
+		position = { x = -285 y = -230 }
+		size = { width = 570 height = 460 }
+		orientation = center
+		origo = center
+		moveable = yes
+		click_to_front = yes
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_window2_1b_border"
+		}
+
+		# Window Title
+		instantTextboxType = {
+			name = "window_title"
+			position = { x = 40 y = 14 }
+			font = "hoi_24header"
+			text = "TRAIT_LOCKER_WINDOW_TITLE"
+			maxWidth = 490
+			maxHeight = 24
+			format = center
+		}
+
+		# Close Button
+		buttonType = {
+			name = "close_button"
+			position = { x = -42 y = 12 }
+			quadTextureSprite = "GFX_closebutton"
+			buttonFont = "hoi_16mbs"
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_RIGHT"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+
+		# Navigation Tab Buttons
+		buttonType = {
+			name = "btn_tab_army"
+			position = { x = 30 y = 46 }
+			quadTextureSprite = "GFX_button_148x34"
+			buttonFont = "hoi_16mbs"
+			buttonText = "TRAIT_LOCKER_TAB_ARMY"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "btn_tab_terrain"
+			position = { x = 211 y = 46 }
+			quadTextureSprite = "GFX_button_148x34"
+			buttonFont = "hoi_16mbs"
+			buttonText = "TRAIT_LOCKER_TAB_TERRAIN"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "btn_tab_navy"
+			position = { x = 392 y = 46 }
+			quadTextureSprite = "GFX_button_148x34"
+			buttonFont = "hoi_16mbs"
+			buttonText = "TRAIT_LOCKER_TAB_NAVY"
+			clicksound = click_default
+		}
+
+		# Batch Action Buttons
+		buttonType = {
+			name = "btn_lock_page"
+			position = { x = 30 y = 86 }
+			quadTextureSprite = "GFX_button_123x34"
+			buttonFont = "hoi_16mbs"
+			buttonText = "TRAIT_LOCKER_BTN_LOCK_PAGE"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "btn_unlock_page"
+			position = { x = 160 y = 86 }
+			quadTextureSprite = "GFX_button_123x34"
+			buttonFont = "hoi_16mbs"
+			buttonText = "TRAIT_LOCKER_BTN_UNLOCK_PAGE"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "btn_lock_all"
+			position = { x = 290 y = 86 }
+			quadTextureSprite = "GFX_button_123x34"
+			buttonFont = "hoi_16mbs"
+			buttonText = "TRAIT_LOCKER_BTN_LOCK_ALL"
+			clicksound = click_default
+			pdx_tooltip = "TRAIT_LOCKER_LOCK_ALL_TT"
+		}
+		buttonType = {
+			name = "btn_unlock_all"
+			position = { x = 420 y = 86 }
+			quadTextureSprite = "GFX_button_123x34"
+			buttonFont = "hoi_16mbs"
+			buttonText = "TRAIT_LOCKER_BTN_UNLOCK_ALL"
+			clicksound = click_default
+			pdx_tooltip = "TRAIT_LOCKER_UNLOCK_ALL_TT"
+		}
+
+		# --- Trait: infantry_leader ---
+		iconType = {
+			name = "bg_infantry_leader"
+			spriteType = "GFX_tiled_plain_bg_small"
+			position = { x = 30 y = 128 }
+		}
+		iconType = {
+			name = "icon_infantry_leader"
+			spriteType = "GFX_trait_infantry_leader"
+			position = { x = 38 y = 138 }
+			pdx_tooltip = "infantry_leader"
+		}
+		instantTextboxType = {
+			name = "name_infantry_leader"
+			position = { x = 66 y = 136 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_NAME_infantry_leader"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_unlocked_infantry_leader"
+			position = { x = 66 y = 156 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_UNLOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_locked_infantry_leader"
+			position = { x = 66 y = 156 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_LOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		buttonType = {
+			name = "btn_lock_infantry_leader_off"
+			position = { x = 235 y = 140 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 1
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_LOCK"
+		}
+		buttonType = {
+			name = "btn_lock_infantry_leader_on"
+			position = { x = 235 y = 140 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 2
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_UNLOCK"
+		}
+		# --- Trait: cavalry_leader ---
+		iconType = {
+			name = "bg_cavalry_leader"
+			spriteType = "GFX_tiled_plain_bg_small"
+			position = { x = 290 y = 128 }
+		}
+		iconType = {
+			name = "icon_cavalry_leader"
+			spriteType = "GFX_trait_cavalry_leader"
+			position = { x = 298 y = 138 }
+			pdx_tooltip = "cavalry_leader"
+		}
+		instantTextboxType = {
+			name = "name_cavalry_leader"
+			position = { x = 326 y = 136 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_NAME_cavalry_leader"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_unlocked_cavalry_leader"
+			position = { x = 326 y = 156 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_UNLOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_locked_cavalry_leader"
+			position = { x = 326 y = 156 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_LOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		buttonType = {
+			name = "btn_lock_cavalry_leader_off"
+			position = { x = 495 y = 140 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 1
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_LOCK"
+		}
+		buttonType = {
+			name = "btn_lock_cavalry_leader_on"
+			position = { x = 495 y = 140 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 2
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_UNLOCK"
+		}
+		# --- Trait: panzer_leader ---
+		iconType = {
+			name = "bg_panzer_leader"
+			spriteType = "GFX_tiled_plain_bg_small"
+			position = { x = 30 y = 190 }
+		}
+		iconType = {
+			name = "icon_panzer_leader"
+			spriteType = "GFX_trait_panzer_leader"
+			position = { x = 38 y = 200 }
+			pdx_tooltip = "panzer_leader"
+		}
+		instantTextboxType = {
+			name = "name_panzer_leader"
+			position = { x = 66 y = 198 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_NAME_panzer_leader"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_unlocked_panzer_leader"
+			position = { x = 66 y = 218 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_UNLOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_locked_panzer_leader"
+			position = { x = 66 y = 218 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_LOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		buttonType = {
+			name = "btn_lock_panzer_leader_off"
+			position = { x = 235 y = 202 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 1
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_LOCK"
+		}
+		buttonType = {
+			name = "btn_lock_panzer_leader_on"
+			position = { x = 235 y = 202 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 2
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_UNLOCK"
+		}
+		# --- Trait: organizer ---
+		iconType = {
+			name = "bg_organizer"
+			spriteType = "GFX_tiled_plain_bg_small"
+			position = { x = 290 y = 190 }
+		}
+		iconType = {
+			name = "icon_organizer"
+			spriteType = "GFX_trait_organizer"
+			position = { x = 298 y = 200 }
+			pdx_tooltip = "organizer"
+		}
+		instantTextboxType = {
+			name = "name_organizer"
+			position = { x = 326 y = 198 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_NAME_organizer"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_unlocked_organizer"
+			position = { x = 326 y = 218 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_UNLOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_locked_organizer"
+			position = { x = 326 y = 218 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_LOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		buttonType = {
+			name = "btn_lock_organizer_off"
+			position = { x = 495 y = 202 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 1
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_LOCK"
+		}
+		buttonType = {
+			name = "btn_lock_organizer_on"
+			position = { x = 495 y = 202 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 2
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_UNLOCK"
+		}
+		# --- Trait: trait_engineer ---
+		iconType = {
+			name = "bg_trait_engineer"
+			spriteType = "GFX_tiled_plain_bg_small"
+			position = { x = 30 y = 252 }
+		}
+		iconType = {
+			name = "icon_trait_engineer"
+			spriteType = "GFX_trait_trait_engineer"
+			position = { x = 38 y = 262 }
+			pdx_tooltip = "trait_engineer"
+		}
+		instantTextboxType = {
+			name = "name_trait_engineer"
+			position = { x = 66 y = 260 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_NAME_trait_engineer"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_unlocked_trait_engineer"
+			position = { x = 66 y = 280 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_UNLOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_locked_trait_engineer"
+			position = { x = 66 y = 280 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_LOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		buttonType = {
+			name = "btn_lock_trait_engineer_off"
+			position = { x = 235 y = 264 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 1
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_LOCK"
+		}
+		buttonType = {
+			name = "btn_lock_trait_engineer_on"
+			position = { x = 235 y = 264 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 2
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_UNLOCK"
+		}
+		# --- Trait: trickster ---
+		iconType = {
+			name = "bg_trickster"
+			spriteType = "GFX_tiled_plain_bg_small"
+			position = { x = 290 y = 252 }
+		}
+		iconType = {
+			name = "icon_trickster"
+			spriteType = "GFX_trait_trickster"
+			position = { x = 298 y = 262 }
+			pdx_tooltip = "trickster"
+		}
+		instantTextboxType = {
+			name = "name_trickster"
+			position = { x = 326 y = 260 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_NAME_trickster"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_unlocked_trickster"
+			position = { x = 326 y = 280 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_UNLOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_locked_trickster"
+			position = { x = 326 y = 280 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_LOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		buttonType = {
+			name = "btn_lock_trickster_off"
+			position = { x = 495 y = 264 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 1
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_LOCK"
+		}
+		buttonType = {
+			name = "btn_lock_trickster_on"
+			position = { x = 495 y = 264 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 2
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_UNLOCK"
+		}
+		# --- Trait: skilled_staffer ---
+		iconType = {
+			name = "bg_skilled_staffer"
+			spriteType = "GFX_tiled_plain_bg_small"
+			position = { x = 30 y = 314 }
+		}
+		iconType = {
+			name = "icon_skilled_staffer"
+			spriteType = "GFX_trait_skilled_staffer"
+			position = { x = 38 y = 324 }
+			pdx_tooltip = "skilled_staffer"
+		}
+		instantTextboxType = {
+			name = "name_skilled_staffer"
+			position = { x = 66 y = 322 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_NAME_skilled_staffer"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_unlocked_skilled_staffer"
+			position = { x = 66 y = 342 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_UNLOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_locked_skilled_staffer"
+			position = { x = 66 y = 342 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_LOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		buttonType = {
+			name = "btn_lock_skilled_staffer_off"
+			position = { x = 235 y = 326 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 1
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_LOCK"
+		}
+		buttonType = {
+			name = "btn_lock_skilled_staffer_on"
+			position = { x = 235 y = 326 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 2
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_UNLOCK"
+		}
+		# --- Trait: commando ---
+		iconType = {
+			name = "bg_commando"
+			spriteType = "GFX_tiled_plain_bg_small"
+			position = { x = 290 y = 314 }
+		}
+		iconType = {
+			name = "icon_commando"
+			spriteType = "GFX_trait_commando"
+			position = { x = 298 y = 324 }
+			pdx_tooltip = "commando"
+		}
+		instantTextboxType = {
+			name = "name_commando"
+			position = { x = 326 y = 322 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_NAME_commando"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_unlocked_commando"
+			position = { x = 326 y = 342 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_UNLOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_locked_commando"
+			position = { x = 326 y = 342 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_LOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		buttonType = {
+			name = "btn_lock_commando_off"
+			position = { x = 495 y = 326 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 1
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_LOCK"
+		}
+		buttonType = {
+			name = "btn_lock_commando_on"
+			position = { x = 495 y = 326 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 2
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_UNLOCK"
+		}
+		# --- Trait: fortress_buster ---
+		iconType = {
+			name = "bg_fortress_buster"
+			spriteType = "GFX_tiled_plain_bg_small"
+			position = { x = 30 y = 376 }
+		}
+		iconType = {
+			name = "icon_fortress_buster"
+			spriteType = "GFX_trait_fortress_buster"
+			position = { x = 38 y = 386 }
+			pdx_tooltip = "fortress_buster"
+		}
+		instantTextboxType = {
+			name = "name_fortress_buster"
+			position = { x = 66 y = 384 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_NAME_fortress_buster"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_unlocked_fortress_buster"
+			position = { x = 66 y = 404 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_UNLOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_locked_fortress_buster"
+			position = { x = 66 y = 404 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_LOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		buttonType = {
+			name = "btn_lock_fortress_buster_off"
+			position = { x = 235 y = 388 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 1
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_LOCK"
+		}
+		buttonType = {
+			name = "btn_lock_fortress_buster_on"
+			position = { x = 235 y = 388 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 2
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_UNLOCK"
+		}
+		# --- Trait: naval_invader ---
+		iconType = {
+			name = "bg_naval_invader"
+			spriteType = "GFX_tiled_plain_bg_small"
+			position = { x = 290 y = 376 }
+		}
+		iconType = {
+			name = "icon_naval_invader"
+			spriteType = "GFX_trait_naval_invader"
+			position = { x = 298 y = 386 }
+			pdx_tooltip = "naval_invader"
+		}
+		instantTextboxType = {
+			name = "name_naval_invader"
+			position = { x = 326 y = 384 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_NAME_naval_invader"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_unlocked_naval_invader"
+			position = { x = 326 y = 404 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_UNLOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_locked_naval_invader"
+			position = { x = 326 y = 404 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_LOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		buttonType = {
+			name = "btn_lock_naval_invader_off"
+			position = { x = 495 y = 388 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 1
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_LOCK"
+		}
+		buttonType = {
+			name = "btn_lock_naval_invader_on"
+			position = { x = 495 y = 388 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 2
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_UNLOCK"
+		}
+		# --- Trait: hill_fighter ---
+		iconType = {
+			name = "bg_hill_fighter"
+			spriteType = "GFX_tiled_plain_bg_small"
+			position = { x = 30 y = 128 }
+		}
+		iconType = {
+			name = "icon_hill_fighter"
+			spriteType = "GFX_trait_hill_fighter"
+			position = { x = 38 y = 138 }
+			pdx_tooltip = "hill_fighter"
+		}
+		instantTextboxType = {
+			name = "name_hill_fighter"
+			position = { x = 66 y = 136 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_NAME_hill_fighter"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_unlocked_hill_fighter"
+			position = { x = 66 y = 156 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_UNLOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_locked_hill_fighter"
+			position = { x = 66 y = 156 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_LOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		buttonType = {
+			name = "btn_lock_hill_fighter_off"
+			position = { x = 235 y = 140 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 1
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_LOCK"
+		}
+		buttonType = {
+			name = "btn_lock_hill_fighter_on"
+			position = { x = 235 y = 140 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 2
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_UNLOCK"
+		}
+		# --- Trait: trait_mountaineer ---
+		iconType = {
+			name = "bg_trait_mountaineer"
+			spriteType = "GFX_tiled_plain_bg_small"
+			position = { x = 290 y = 128 }
+		}
+		iconType = {
+			name = "icon_trait_mountaineer"
+			spriteType = "GFX_trait_trait_mountaineer"
+			position = { x = 298 y = 138 }
+			pdx_tooltip = "trait_mountaineer"
+		}
+		instantTextboxType = {
+			name = "name_trait_mountaineer"
+			position = { x = 326 y = 136 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_NAME_trait_mountaineer"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_unlocked_trait_mountaineer"
+			position = { x = 326 y = 156 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_UNLOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_locked_trait_mountaineer"
+			position = { x = 326 y = 156 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_LOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		buttonType = {
+			name = "btn_lock_trait_mountaineer_off"
+			position = { x = 495 y = 140 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 1
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_LOCK"
+		}
+		buttonType = {
+			name = "btn_lock_trait_mountaineer_on"
+			position = { x = 495 y = 140 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 2
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_UNLOCK"
+		}
+		# --- Trait: urban_assault_specialist ---
+		iconType = {
+			name = "bg_urban_assault_specialist"
+			spriteType = "GFX_tiled_plain_bg_small"
+			position = { x = 30 y = 190 }
+		}
+		iconType = {
+			name = "icon_urban_assault_specialist"
+			spriteType = "GFX_trait_urban_assault_specialist"
+			position = { x = 38 y = 200 }
+			pdx_tooltip = "urban_assault_specialist"
+		}
+		instantTextboxType = {
+			name = "name_urban_assault_specialist"
+			position = { x = 66 y = 198 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_NAME_urban_assault_specialist"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_unlocked_urban_assault_specialist"
+			position = { x = 66 y = 218 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_UNLOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_locked_urban_assault_specialist"
+			position = { x = 66 y = 218 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_LOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		buttonType = {
+			name = "btn_lock_urban_assault_specialist_off"
+			position = { x = 235 y = 202 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 1
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_LOCK"
+		}
+		buttonType = {
+			name = "btn_lock_urban_assault_specialist_on"
+			position = { x = 235 y = 202 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 2
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_UNLOCK"
+		}
+		# --- Trait: jungle_rat ---
+		iconType = {
+			name = "bg_jungle_rat"
+			spriteType = "GFX_tiled_plain_bg_small"
+			position = { x = 290 y = 190 }
+		}
+		iconType = {
+			name = "icon_jungle_rat"
+			spriteType = "GFX_trait_jungle_rat"
+			position = { x = 298 y = 200 }
+			pdx_tooltip = "jungle_rat"
+		}
+		instantTextboxType = {
+			name = "name_jungle_rat"
+			position = { x = 326 y = 198 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_NAME_jungle_rat"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_unlocked_jungle_rat"
+			position = { x = 326 y = 218 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_UNLOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_locked_jungle_rat"
+			position = { x = 326 y = 218 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_LOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		buttonType = {
+			name = "btn_lock_jungle_rat_off"
+			position = { x = 495 y = 202 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 1
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_LOCK"
+		}
+		buttonType = {
+			name = "btn_lock_jungle_rat_on"
+			position = { x = 495 y = 202 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 2
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_UNLOCK"
+		}
+		# --- Trait: swamp_fox ---
+		iconType = {
+			name = "bg_swamp_fox"
+			spriteType = "GFX_tiled_plain_bg_small"
+			position = { x = 30 y = 252 }
+		}
+		iconType = {
+			name = "icon_swamp_fox"
+			spriteType = "GFX_trait_swamp_fox"
+			position = { x = 38 y = 262 }
+			pdx_tooltip = "swamp_fox"
+		}
+		instantTextboxType = {
+			name = "name_swamp_fox"
+			position = { x = 66 y = 260 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_NAME_swamp_fox"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_unlocked_swamp_fox"
+			position = { x = 66 y = 280 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_UNLOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_locked_swamp_fox"
+			position = { x = 66 y = 280 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_LOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		buttonType = {
+			name = "btn_lock_swamp_fox_off"
+			position = { x = 235 y = 264 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 1
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_LOCK"
+		}
+		buttonType = {
+			name = "btn_lock_swamp_fox_on"
+			position = { x = 235 y = 264 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 2
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_UNLOCK"
+		}
+		# --- Trait: desert_fox ---
+		iconType = {
+			name = "bg_desert_fox"
+			spriteType = "GFX_tiled_plain_bg_small"
+			position = { x = 290 y = 252 }
+		}
+		iconType = {
+			name = "icon_desert_fox"
+			spriteType = "GFX_trait_desert_fox"
+			position = { x = 298 y = 262 }
+			pdx_tooltip = "desert_fox"
+		}
+		instantTextboxType = {
+			name = "name_desert_fox"
+			position = { x = 326 y = 260 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_NAME_desert_fox"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_unlocked_desert_fox"
+			position = { x = 326 y = 280 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_UNLOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_locked_desert_fox"
+			position = { x = 326 y = 280 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_LOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		buttonType = {
+			name = "btn_lock_desert_fox_off"
+			position = { x = 495 y = 264 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 1
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_LOCK"
+		}
+		buttonType = {
+			name = "btn_lock_desert_fox_on"
+			position = { x = 495 y = 264 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 2
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_UNLOCK"
+		}
+		# --- Trait: winter_specialist ---
+		iconType = {
+			name = "bg_winter_specialist"
+			spriteType = "GFX_tiled_plain_bg_small"
+			position = { x = 30 y = 314 }
+		}
+		iconType = {
+			name = "icon_winter_specialist"
+			spriteType = "GFX_trait_winter_specialist"
+			position = { x = 38 y = 324 }
+			pdx_tooltip = "winter_specialist"
+		}
+		instantTextboxType = {
+			name = "name_winter_specialist"
+			position = { x = 66 y = 322 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_NAME_winter_specialist"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_unlocked_winter_specialist"
+			position = { x = 66 y = 342 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_UNLOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_locked_winter_specialist"
+			position = { x = 66 y = 342 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_LOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		buttonType = {
+			name = "btn_lock_winter_specialist_off"
+			position = { x = 235 y = 326 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 1
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_LOCK"
+		}
+		buttonType = {
+			name = "btn_lock_winter_specialist_on"
+			position = { x = 235 y = 326 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 2
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_UNLOCK"
+		}
+		# --- Trait: ranger ---
+		iconType = {
+			name = "bg_ranger"
+			spriteType = "GFX_tiled_plain_bg_small"
+			position = { x = 290 y = 314 }
+		}
+		iconType = {
+			name = "icon_ranger"
+			spriteType = "GFX_trait_ranger"
+			position = { x = 298 y = 324 }
+			pdx_tooltip = "ranger"
+		}
+		instantTextboxType = {
+			name = "name_ranger"
+			position = { x = 326 y = 322 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_NAME_ranger"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_unlocked_ranger"
+			position = { x = 326 y = 342 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_UNLOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_locked_ranger"
+			position = { x = 326 y = 342 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_LOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		buttonType = {
+			name = "btn_lock_ranger_off"
+			position = { x = 495 y = 326 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 1
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_LOCK"
+		}
+		buttonType = {
+			name = "btn_lock_ranger_on"
+			position = { x = 495 y = 326 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 2
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_UNLOCK"
+		}
+		# --- Trait: blockade_runner ---
+		iconType = {
+			name = "bg_blockade_runner"
+			spriteType = "GFX_tiled_plain_bg_small"
+			position = { x = 30 y = 128 }
+		}
+		iconType = {
+			name = "icon_blockade_runner"
+			spriteType = "GFX_trait_blockade_runner"
+			position = { x = 38 y = 138 }
+			pdx_tooltip = "blockade_runner"
+		}
+		instantTextboxType = {
+			name = "name_blockade_runner"
+			position = { x = 66 y = 136 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_NAME_blockade_runner"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_unlocked_blockade_runner"
+			position = { x = 66 y = 156 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_UNLOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_locked_blockade_runner"
+			position = { x = 66 y = 156 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_LOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		buttonType = {
+			name = "btn_lock_blockade_runner_off"
+			position = { x = 235 y = 140 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 1
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_LOCK"
+		}
+		buttonType = {
+			name = "btn_lock_blockade_runner_on"
+			position = { x = 235 y = 140 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 2
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_UNLOCK"
+		}
+		# --- Trait: seawolf ---
+		iconType = {
+			name = "bg_seawolf"
+			spriteType = "GFX_tiled_plain_bg_small"
+			position = { x = 290 y = 128 }
+		}
+		iconType = {
+			name = "icon_seawolf"
+			spriteType = "GFX_trait_seawolf"
+			position = { x = 298 y = 138 }
+			pdx_tooltip = "seawolf"
+		}
+		instantTextboxType = {
+			name = "name_seawolf"
+			position = { x = 326 y = 136 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_NAME_seawolf"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_unlocked_seawolf"
+			position = { x = 326 y = 156 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_UNLOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_locked_seawolf"
+			position = { x = 326 y = 156 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_LOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		buttonType = {
+			name = "btn_lock_seawolf_off"
+			position = { x = 495 y = 140 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 1
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_LOCK"
+		}
+		buttonType = {
+			name = "btn_lock_seawolf_on"
+			position = { x = 495 y = 140 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 2
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_UNLOCK"
+		}
+		# --- Trait: fleet_protector ---
+		iconType = {
+			name = "bg_fleet_protector"
+			spriteType = "GFX_tiled_plain_bg_small"
+			position = { x = 30 y = 190 }
+		}
+		iconType = {
+			name = "icon_fleet_protector"
+			spriteType = "GFX_trait_fleet_protector"
+			position = { x = 38 y = 200 }
+			pdx_tooltip = "fleet_protector"
+		}
+		instantTextboxType = {
+			name = "name_fleet_protector"
+			position = { x = 66 y = 198 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_NAME_fleet_protector"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_unlocked_fleet_protector"
+			position = { x = 66 y = 218 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_UNLOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_locked_fleet_protector"
+			position = { x = 66 y = 218 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_LOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		buttonType = {
+			name = "btn_lock_fleet_protector_off"
+			position = { x = 235 y = 202 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 1
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_LOCK"
+		}
+		buttonType = {
+			name = "btn_lock_fleet_protector_on"
+			position = { x = 235 y = 202 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 2
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_UNLOCK"
+		}
+		# --- Trait: superior_tactician ---
+		iconType = {
+			name = "bg_superior_tactician"
+			spriteType = "GFX_tiled_plain_bg_small"
+			position = { x = 290 y = 190 }
+		}
+		iconType = {
+			name = "icon_superior_tactician"
+			spriteType = "GFX_trait_superior_tactician"
+			position = { x = 298 y = 200 }
+			pdx_tooltip = "superior_tactician"
+		}
+		instantTextboxType = {
+			name = "name_superior_tactician"
+			position = { x = 326 y = 198 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_NAME_superior_tactician"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_unlocked_superior_tactician"
+			position = { x = 326 y = 218 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_UNLOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_locked_superior_tactician"
+			position = { x = 326 y = 218 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_LOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		buttonType = {
+			name = "btn_lock_superior_tactician_off"
+			position = { x = 495 y = 202 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 1
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_LOCK"
+		}
+		buttonType = {
+			name = "btn_lock_superior_tactician_on"
+			position = { x = 495 y = 202 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 2
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_UNLOCK"
+		}
+		# --- Trait: air_controller ---
+		iconType = {
+			name = "bg_air_controller"
+			spriteType = "GFX_tiled_plain_bg_small"
+			position = { x = 30 y = 252 }
+		}
+		iconType = {
+			name = "icon_air_controller"
+			spriteType = "GFX_trait_air_controller"
+			position = { x = 38 y = 262 }
+			pdx_tooltip = "air_controller"
+		}
+		instantTextboxType = {
+			name = "name_air_controller"
+			position = { x = 66 y = 260 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_NAME_air_controller"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_unlocked_air_controller"
+			position = { x = 66 y = 280 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_UNLOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_locked_air_controller"
+			position = { x = 66 y = 280 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_LOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		buttonType = {
+			name = "btn_lock_air_controller_off"
+			position = { x = 235 y = 264 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 1
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_LOCK"
+		}
+		buttonType = {
+			name = "btn_lock_air_controller_on"
+			position = { x = 235 y = 264 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 2
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_UNLOCK"
+		}
+		# --- Trait: ironside ---
+		iconType = {
+			name = "bg_ironside"
+			spriteType = "GFX_tiled_plain_bg_small"
+			position = { x = 290 y = 252 }
+		}
+		iconType = {
+			name = "icon_ironside"
+			spriteType = "GFX_trait_ironside"
+			position = { x = 298 y = 262 }
+			pdx_tooltip = "ironside"
+		}
+		instantTextboxType = {
+			name = "name_ironside"
+			position = { x = 326 y = 260 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_NAME_ironside"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_unlocked_ironside"
+			position = { x = 326 y = 280 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_UNLOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_locked_ironside"
+			position = { x = 326 y = 280 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_LOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		buttonType = {
+			name = "btn_lock_ironside_off"
+			position = { x = 495 y = 264 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 1
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_LOCK"
+		}
+		buttonType = {
+			name = "btn_lock_ironside_on"
+			position = { x = 495 y = 264 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 2
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_UNLOCK"
+		}
+		# --- Trait: arctic_water_expert ---
+		iconType = {
+			name = "bg_arctic_water_expert"
+			spriteType = "GFX_tiled_plain_bg_small"
+			position = { x = 30 y = 314 }
+		}
+		iconType = {
+			name = "icon_arctic_water_expert"
+			spriteType = "GFX_trait_arctic_water_expert"
+			position = { x = 38 y = 324 }
+			pdx_tooltip = "arctic_water_expert"
+		}
+		instantTextboxType = {
+			name = "name_arctic_water_expert"
+			position = { x = 66 y = 322 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_NAME_arctic_water_expert"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_unlocked_arctic_water_expert"
+			position = { x = 66 y = 342 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_UNLOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_locked_arctic_water_expert"
+			position = { x = 66 y = 342 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_LOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		buttonType = {
+			name = "btn_lock_arctic_water_expert_off"
+			position = { x = 235 y = 326 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 1
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_LOCK"
+		}
+		buttonType = {
+			name = "btn_lock_arctic_water_expert_on"
+			position = { x = 235 y = 326 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 2
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_UNLOCK"
+		}
+		# --- Trait: inshore_fighter ---
+		iconType = {
+			name = "bg_inshore_fighter"
+			spriteType = "GFX_tiled_plain_bg_small"
+			position = { x = 290 y = 314 }
+		}
+		iconType = {
+			name = "icon_inshore_fighter"
+			spriteType = "GFX_trait_inshore_fighter"
+			position = { x = 298 y = 324 }
+			pdx_tooltip = "inshore_fighter"
+		}
+		instantTextboxType = {
+			name = "name_inshore_fighter"
+			position = { x = 326 y = 322 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_NAME_inshore_fighter"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_unlocked_inshore_fighter"
+			position = { x = 326 y = 342 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_UNLOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_locked_inshore_fighter"
+			position = { x = 326 y = 342 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_LOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		buttonType = {
+			name = "btn_lock_inshore_fighter_off"
+			position = { x = 495 y = 326 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 1
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_LOCK"
+		}
+		buttonType = {
+			name = "btn_lock_inshore_fighter_on"
+			position = { x = 495 y = 326 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 2
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_UNLOCK"
+		}
+		# --- Trait: blue_water_expert ---
+		iconType = {
+			name = "bg_blue_water_expert"
+			spriteType = "GFX_tiled_plain_bg_small"
+			position = { x = 30 y = 376 }
+		}
+		iconType = {
+			name = "icon_blue_water_expert"
+			spriteType = "GFX_trait_blue_water_expert"
+			position = { x = 38 y = 386 }
+			pdx_tooltip = "blue_water_expert"
+		}
+		instantTextboxType = {
+			name = "name_blue_water_expert"
+			position = { x = 66 y = 384 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_NAME_blue_water_expert"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_unlocked_blue_water_expert"
+			position = { x = 66 y = 404 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_UNLOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_locked_blue_water_expert"
+			position = { x = 66 y = 404 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_LOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		buttonType = {
+			name = "btn_lock_blue_water_expert_off"
+			position = { x = 235 y = 388 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 1
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_LOCK"
+		}
+		buttonType = {
+			name = "btn_lock_blue_water_expert_on"
+			position = { x = 235 y = 388 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 2
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_UNLOCK"
+		}
+		# --- Trait: green_water_expert ---
+		iconType = {
+			name = "bg_green_water_expert"
+			spriteType = "GFX_tiled_plain_bg_small"
+			position = { x = 290 y = 376 }
+		}
+		iconType = {
+			name = "icon_green_water_expert"
+			spriteType = "GFX_trait_green_water_expert"
+			position = { x = 298 y = 386 }
+			pdx_tooltip = "green_water_expert"
+		}
+		instantTextboxType = {
+			name = "name_green_water_expert"
+			position = { x = 326 y = 384 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_NAME_green_water_expert"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_unlocked_green_water_expert"
+			position = { x = 326 y = 404 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_UNLOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		instantTextboxType = {
+			name = "status_locked_green_water_expert"
+			position = { x = 326 y = 404 }
+			font = "hoi_16mbs"
+			text = "TRAIT_LOCKER_STATUS_LOCKED"
+			maxWidth = 162
+			maxHeight = 18
+			fixedsize = yes
+			format = left
+		}
+		buttonType = {
+			name = "btn_lock_green_water_expert_off"
+			position = { x = 495 y = 388 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 1
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_LOCK"
+		}
+		buttonType = {
+			name = "btn_lock_green_water_expert_on"
+			position = { x = 495 y = 388 }
+			quadTextureSprite = "GFX_generic_checkbox"
+			frame = 2
+			clicksound = click_checkbox
+			pdx_tooltip = "TRAIT_LOCKER_CLICK_TO_UNLOCK"
+		}
+	}
+}
