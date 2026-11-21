@@ -4,5 +4,5 @@ tags={
 	"Utilities"
 	"Military"
 }
-name="将领特质锁 (General Trait Locker)"
+name="将领特质锁 (适配原版)"
 supported_version="1.20.*"
